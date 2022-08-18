@@ -72,7 +72,7 @@ def maxDepth1(self, root: Node) -> int:
         level += 1
         
     return level
-        
+#itereative DFS  
 def maxDepth2(self, root: Node) -> int:
     stack= [[root,1]]
     res = 0

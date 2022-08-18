@@ -44,17 +44,55 @@
 # 1 <= words[i].length <= 12
 # words[i] consists of lowercase English letters.
 
-def func(words):
-    morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
-    alph = "abcdefghijklmnopqrstuvwxyz"
-    d = {}
-    trans = []
-    for i in range(len(alph)):
-        d[alph[i]] = morse[i]
-    for i in words:
-        trans.append("".join(list(map(lambda x:d[x], i))))
+# def func(words):
+#     morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+#     alph = "abcdefghijklmnopqrstuvwxyz"
+#     d = {}
+#     trans = []
+#     for i in range(len(alph)):
+#         d[alph[i]] = morse[i]
+#     for i in words:
+#         trans.append("".join(list(map(lambda x:d[x], i))))
         
-    return len(list(set(trans)))
+#     return len(list(set(trans)))
 
-print(func(["gin","zen","gig","msg"]))
+# print(func(["gin","zen","gig","msg"]))
+
+# You are given an integer array arr. You can choose a set of integers and remove all the occurrences of these integers in the array.
+# Return the minimum size of the set so that at least half of the integers of the array are removed.
+# Example 1:
+# Input: arr = [3,3,3,3,5,5,5,2,2,7]
+# Output: 2
+# Explanation: Choosing {3,7} will make the new array [5,5,5,2,2] which has size 5 (i.e equal to half of the size of the old array).
+# Possible sets of size 2 are {3,5},{3,2},{5,2}.
+# Choosing set {2,7} is not possible as it will make the new array [3,3,3,3,5,5,5] which has a size greater than half of the size of the old array.
+# Example 2:
+# Input: arr = [7,7,7,7,7,7]
+# Output: 1
+# Explanation: The only possible set you can choose is {7}. This will make the new array empty.
+
+from collections import Counter
+def func(arr) -> int:
+    uni = list(set(arr))
+    if len(arr) == 2 or uni == [arr[0]]:
+        return 1
+    minimum = len(arr)
+    left = 0
+    right = 1
+    counter = Counter(arr)
+    
+    while left < len(uni):
+        len_arr = len(arr)
+        for i in range(left,right):
+            len_arr -= counter[uni[i]]
+        minimum = min(minimum,len_arr)
+        right += 1
+        if right > len(uni):
+            left += 1
+            right = left + 1
+            
+    return minimum
+print(func([3,3,3,3,5,5,5,2,2,7]))
+        
+        
     
