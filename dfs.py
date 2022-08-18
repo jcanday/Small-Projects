@@ -64,7 +64,25 @@ def maxDepth1(self, root: Node) -> int:
     q = deque([root])
     while q:
         for i in range(len(q)):
-            q.popleft()
-            i
+            node = q.popleft()
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
         level += 1
-
+        
+    return level
+        
+def maxDepth2(self, root: Node) -> int:
+    stack= [[root,1]]
+    res = 0
+    
+    while stack:
+        node,depth = stack.pop()
+        
+        if node:
+            res = max(res, depth)
+            stack.append([node.left],depth+1)
+            stack.append([node.right],depth+1)
+    
+    return res
