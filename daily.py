@@ -71,28 +71,54 @@
 # Output: 1
 # Explanation: The only possible set you can choose is {7}. This will make the new array empty.
 
-from collections import Counter
-def func(arr) -> int:
-    uni = list(set(arr))
-    if len(arr) == 2 or uni == [arr[0]]:
-        return 1
-    minimum = len(arr)
-    left = 0
-    right = 1
-    counter = Counter(arr)
+# from collections import Counter
+# def func(arr) -> int:
+#     uni = list(set(arr))
+#     if len(arr) == 2 or uni == [arr[0]]:
+#         return 1
+#     minimum = len(arr)
+#     left = 0
+#     right = 1
+#     counter = Counter(arr)
     
-    while left < len(uni):
-        len_arr = len(arr)
-        for i in range(left,right):
-            len_arr -= counter[uni[i]]
-        minimum = min(minimum,len_arr)
-        right += 1
-        if right > len(uni):
-            left += 1
-            right = left + 1
+#     while left < len(uni):
+#         len_arr = len(arr)
+#         for i in range(left,right):
+#             len_arr -= counter[uni[i]]
+#         minimum = min(minimum,len_arr)
+#         right += 1
+#         if right > len(uni):
+#             left += 1
+#             right = left + 1
             
-    return minimum
-print(func([3,3,3,3,5,5,5,2,2,7]))
-        
-        
+#     return minimum
+# print(func([3,3,3,3,5,5,5,2,2,7]))
+
+
+# Simple question to start off the week!
+# Given a string of words, return the length of the shortest word(s).
+# String will never be empty and you do not need to account for different data types.
+# Added challenge: do this in O(1) space (without making another data structure)
+# Example 1:
+# s = "Hello World JavaScript!"
+# output: 5
+# explained: "Hello" and "World" both have 5 characters
+# Example 2:
+# s = "We built a nest and tested it."
+# output: 1
+# explained: "a" is the shortest word with a length of 1
+
+def func(s):
+    m = len(s)
+    currmin = 0
+    for i in range(len(s)):
+        if s[i] != " ":
+            currmin += 1
+        else:
+            m = min(currmin,m)
+            currmin = 0
+            
+    return m
+
+print(func("We built a nest and tested it."))
     
