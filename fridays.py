@@ -57,7 +57,6 @@
 # s = AAAAA11BBBBBBBBBBCCC"
 # Ouput: "5A219B1B3C"
 
-from collections import Counter
 def runLength(s):
     newS = ""
     d = {}

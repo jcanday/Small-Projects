@@ -108,17 +108,43 @@
 # output: 1
 # explained: "a" is the shortest word with a length of 1
 
-def func(s):
-    m = len(s)
-    currmin = 0
-    for i in range(len(s)):
-        if s[i] != " ":
-            currmin += 1
-        else:
-            m = min(currmin,m)
-            currmin = 0
+# def func(s):
+#     m = len(s)
+#     currmin = 0
+#     for i in range(len(s)):
+#         if s[i] != " ":
+#             currmin += 1
+#         else:
+#             m = min(currmin,m)
+#             currmin = 0
             
-    return m
+#     return m
 
-print(func("We built a nest and tested it."))
+# print(func("We built a nest and tested it."))
+
+# Given an array containing two strings. The strings contain keypresses of printable characters and "-B" separated by commas. "-B" is considered a backspace. Return true if the strings form the same word, return False if not.
+# example input:
+# [''c,a,r,d","c,a,r,-B,r,d"] #true
+
+a = ["c,a,r,d","c,a,r,-B,r,d"]
+b = ["","-B,-B,-B"]
+
+c = ["c,a,r,d","-B,-B,-B,c,a,r,-B,r,d"]
+def backSpace(arr):
+    def typeWord(words):
+        out = []
+        for char in words:
+            if char != '-B' and char != "":
+                out.append(char)
+            else:
+                if len(out):
+                    out.pop()
+        return ''.join(out)      
+    word_1 = arr[0].split(",")
+    word_2 = arr[1].split(",")
+    return typeWord(word_1) == typeWord(word_2)
+    
+print(backSpace(c))
+    
+    
     
