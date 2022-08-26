@@ -25,3 +25,5 @@ def routerReach(headCount,routerRange,routerLocation):
             count += 1
             
     return count
+
+#Binary Search Tree
