@@ -58,23 +58,27 @@
 # Ouput: "5A219B1B3C"
 
 def runLength(s):
-    newS = ""
-    d = {}
-    for i in s:
-        if i in d:
-            d[i] += 1
+    newS = []
+    pointer = 0
+    prev = s[0]
+    counter = 0
+    while pointer < len(s):
+        if s[pointer] == prev:
+            counter += 1
+            if counter == 9:
+                newS.append(f'{counter}{prev}')
+                counter = 0
         else:
-            d[i] = 1
-    
-    for x,y in d.items():
-        if y > 9:
-            while y > 9:
-                newS += f'9{x}'
-                y -= 9
-        newS += f'{y}{x}'         
-    return newS
-    
-    
+            newS.append(f'{counter}{prev}')
+            prev = s[pointer]
+            counter = 1
+        if pointer == len(s) - 1:
+            newS.append(f'{counter}{prev}')
+        
+        pointer += 1
+            
+    return "".join(newS)
+        
 print(runLength("AAAAA11BBBBBBBBBBCCC"))
          
         

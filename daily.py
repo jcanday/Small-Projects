@@ -126,25 +126,67 @@
 # example input:
 # [''c,a,r,d","c,a,r,-B,r,d"] #true
 
-a = ["c,a,r,d","c,a,r,-B,r,d"]
-b = ["","-B,-B,-B"]
+# a = ["c,a,r,d","c,a,r,-B,r,d"]
+# b = ["","-B,-B,-B"]
 
-c = ["c,a,r,d","-B,-B,-B,c,a,r,-B,r,d"]
-def backSpace(arr):
-    def typeWord(words):
-        out = []
-        for char in words:
-            if char != '-B' and char != "":
-                out.append(char)
+# c = ["c,a,r,d","-B,-B,-B,c,a,r,-B,r,d"]
+# def backSpace(arr):
+#     def typeWord(words):
+#         out = []
+#         for char in words:
+#             if char != '-B' and char != "":
+#                 out.append(char)
+#             else:
+#                 if len(out):
+#                     out.pop()
+#         return ''.join(out)      
+#     word_1 = arr[0].split(",")
+#     word_2 = arr[1].split(",")
+#     return typeWord(word_1) == typeWord(word_2)
+    
+# print(backSpace(c))
+
+#  Given two ordered integer lists of any length and a limit, return an ordered list of the n smallest elements from the lists where n equals the limit. This should be accomplished in linear time and O(n) space where n is the limit, and is doable using no built-in functions.
+# Notes:
+# This is a problem with intentionally unclear wording - make sure you use the examples to help figure out what the problem is asking.
+# This a problem that involves a lot of edge cases- make sure you consider all possible inputs and how they may affect your solution.
+# Examples:
+# 	list_a = [1, 3, 5, 7]
+# 	list_b = [0, 6, 8]
+# 	limit = 4
+
+# 	Answer = [0, 1, 3, 5]
+# ---
+# 	List_a = [1, 1, 5, 5, 9]
+# 	List_b = [7]
+# 	Limit = 8
+
+# 	Answer = [1, 1, 5, 5, 7, 9]
+
+def func(l1,l2,limit):
+    if limit <= 0:
+        return []
+    l3 = []
+    l = 0
+    r = 0
+    while len(l3) <= limit:
+        if len(l1) <= l and len(l2) <= r:
+            return l3
+        if len(l1) > l and len(l2) > r:
+            if l1[l] < l2[r]:
+                l3.append(l1[l])
+                l += 1
             else:
-                if len(out):
-                    out.pop()
-        return ''.join(out)      
-    word_1 = arr[0].split(",")
-    word_2 = arr[1].split(",")
-    return typeWord(word_1) == typeWord(word_2)
+                l3.append(l2[r])
+                r += 1
+        elif len(l1) <= l and len(l2) > r:
+            l3.append(l2[r])
+            r += 1
+        else:
+            l3.append(l1[l])
+            l += 1
+    return l3
     
-print(backSpace(c))
-    
-    
+print(func([1, 3, 5, 7],[0, 6, 8],4))
+        
     
