@@ -158,7 +158,7 @@
 # 	Answer = [0, 1, 3, 5]
 # ---
 # 	List_a = [1, 1, 5, 5, 9]
-# 	List_b = [7]
+# 	List_b =    
 # 	Limit = 8
 
 # 	Answer = [1, 1, 5, 5, 7, 9]
@@ -169,7 +169,7 @@ def func(l1,l2,limit):
     l3 = []
     l = 0
     r = 0
-    while len(l3) <= limit:
+    while len(l3) < limit:
         if len(l1) <= l and len(l2) <= r:
             return l3
         if len(l1) > l and len(l2) > r:
