@@ -57,29 +57,55 @@
 # s = AAAAA11BBBBBBBBBBCCC"
 # Ouput: "5A219B1B3C"
 
-def runLength(s):
-    newS = []
-    pointer = 0
-    prev = s[0]
-    counter = 0
-    while pointer < len(s):
-        if s[pointer] == prev:
-            counter += 1
-            if counter == 9:
-                newS.append(f'{counter}{prev}')
-                counter = 0
-        else:
-            newS.append(f'{counter}{prev}')
-            prev = s[pointer]
-            counter = 1
-        if pointer == len(s) - 1:
-            newS.append(f'{counter}{prev}')
+# def runLength(s):
+#     newS = []
+#     pointer = 0
+#     prev = s[0]
+#     counter = 0
+#     while pointer < len(s):
+#         if s[pointer] == prev:
+#             counter += 1
+#             if counter == 9:
+#                 newS.append(f'{counter}{prev}')
+#                 counter = 0
+#         else:
+#             newS.append(f'{counter}{prev}')
+#             prev = s[pointer]
+#             counter = 1
+#         if pointer == len(s) - 1:
+#             newS.append(f'{counter}{prev}')
         
-        pointer += 1
+#         pointer += 1
             
-    return "".join(newS)
+#     return "".join(newS)
         
-print(runLength("AAAAA11BBBBBBBBBBCCC"))
+# print(runLength("AAAAA11BBBBBBBBBBCCC"))
+
+
+def trap(height):
+        left = 0
+        right = len(height) -1
+        res = 0
+        maxL = 0
+        maxR = 0
+        while left < right:
+            if height[left] > height[right]:
+                if height[right] >= maxR:
+                    maxR = height[right]
+                else:
+                    res += maxR - height[right]
+                right -= 1
+                 
+            else:
+                if height[left] >= maxL:
+                    maxL = height[left]
+                else:
+                    res += maxL - height[left]
+                left += 1   
+                
+        return res
+
+print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))       
          
         
     
