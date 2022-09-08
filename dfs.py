@@ -105,5 +105,5 @@ def tree2str(root):
     if root.left == None and root.right == None:
         return str(root.val)
     if(root.right == None):
-        return f"{root.val}({self.tree2str(root.left)})"
-    return f"{root.val}({self.tree2str(root.left)})({self.tree2str(root.right)})"
+        return f"{root.val}({tree2str(root.left)})"
+    return f"{root.val}({tree2str(root.left)})({tree2str(root.right)})"
