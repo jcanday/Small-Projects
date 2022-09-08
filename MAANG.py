@@ -27,3 +27,18 @@ def routerReach(headCount,routerRange,routerLocation):
     return count
 
 #Binary Search Tree
+
+def invertTree(root):
+        if root == None:
+            return root
+        else:
+            temp = root  
+
+            invertTree(root.left)  
+            invertTree(root.right)  
+
+            temp = root.left  
+            root.left = root.right  
+            root.right = temp
+            
+            return root
