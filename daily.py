@@ -163,30 +163,70 @@
 
 # 	Answer = [1, 1, 5, 5, 7, 9]
 
-def func(l1,l2,limit):
-    if limit <= 0:
-        return []
-    l3 = []
-    l = 0
-    r = 0
-    while len(l3) < limit:
-        if len(l1) <= l and len(l2) <= r:
-            return l3
-        if len(l1) > l and len(l2) > r:
-            if l1[l] < l2[r]:
-                l3.append(l1[l])
-                l += 1
-            else:
-                l3.append(l2[r])
-                r += 1
-        elif len(l1) <= l and len(l2) > r:
-            l3.append(l2[r])
-            r += 1
-        else:
-            l3.append(l1[l])
-            l += 1
-    return l3
+# def func(l1,l2,limit):
+#     if limit <= 0:
+#         return []
+#     l3 = []
+#     l = 0
+#     r = 0
+#     while len(l3) < limit:
+#         if len(l1) <= l and len(l2) <= r:
+#             return l3
+#         if len(l1) > l and len(l2) > r:
+#             if l1[l] < l2[r]:
+#                 l3.append(l1[l])
+#                 l += 1
+#             else:
+#                 l3.append(l2[r])
+#                 r += 1
+#         elif len(l1) <= l and len(l2) > r:
+#             l3.append(l2[r])
+#             r += 1
+#         else:
+#             l3.append(l1[l])
+#             l += 1
+#     return l3
     
-print(func([1, 3, 5, 7],[0, 6, 8],4))
+# print(func([1, 3, 5, 7],[0, 6, 8],4))
         
-    
+# A format for expressing an ordered list of integers is to use a comma separated list of either
+
+# individual integers
+# or a range of integers denoted by the starting integer separated from the end integer in the range by a dash, '-'. The range includes all integers in the interval including both endpoints. It is not considered a range unless it spans at least 3 numbers. For example "12,13,15-17"
+# Complete the solution so that it takes a list of integers in increasing order and returns a correctly formatted string in the range format.
+
+# Example:
+
+# solution([-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20])
+# # returns "-10--8,-6,-3-1,3-5,7-11,14,15,17-20"
+def solution(args):
+    resList = []
+    pointer = 0
+    range = []
+    while pointer < len(args):
+        if pointer == len(args)-1:
+            if range:
+                range.append(str(args[pointer]))
+                if len(range) >= 3:
+                    resList.append(f'{range[0]}-{range[-1]}')
+                    range.clear()
+                elif len(range) < 3:
+                    resList.extend(range)
+                    range.clear()               
+            else:
+                resList.append(str(args[pointer]))
+        elif args[pointer+1] == args[pointer] + 1:
+            range.append(str(args[pointer]))
+        else:
+            if range:
+                range.append(str(args[pointer]))
+                if len(range) >= 3:
+                    resList.append(f'{range[0]}-{range[-1]}')
+                    range.clear()
+                elif len(range) < 3:
+                    resList.extend(range)
+                    range.clear()               
+            else:
+                resList.append(str(args[pointer]))
+        pointer += 1
+    return ",".join(resList)
