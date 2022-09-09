@@ -1,0 +1,16 @@
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\bin\Debug\net6.0\Comments.exe
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\bin\Debug\net6.0\Comments.deps.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\bin\Debug\net6.0\Comments.runtimeconfig.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\bin\Debug\net6.0\Comments.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\bin\Debug\net6.0\Comments.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\bin\Debug\net6.0\Comments.xml
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.csproj.AssemblyReference.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.AssemblyInfoInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.AssemblyInfo.cs
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.csproj.CoreCompileInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\refint\Comments.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\Comments.genruntimeconfig.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Overview\Comments\obj\Debug\net6.0\ref\Comments.dll

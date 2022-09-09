@@ -1,0 +1,15 @@
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\bin\Debug\net6.0\ConditionalOps.exe
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\bin\Debug\net6.0\ConditionalOps.deps.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\bin\Debug\net6.0\ConditionalOps.runtimeconfig.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\bin\Debug\net6.0\ConditionalOps.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\bin\Debug\net6.0\ConditionalOps.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.csproj.AssemblyReference.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.AssemblyInfoInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.AssemblyInfo.cs
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.csproj.CoreCompileInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\refint\ConditionalOps.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ConditionalOps.genruntimeconfig.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Program Flow\Conditional-switch\obj\Debug\net6.0\ref\ConditionalOps.dll
