@@ -82,30 +82,66 @@
 # print(runLength("AAAAA11BBBBBBBBBBCCC"))
 
 
-def trap(height):
-        left = 0
-        right = len(height) -1
-        res = 0
-        maxL = 0
-        maxR = 0
-        while left < right:
-            if height[left] > height[right]:
-                if height[right] >= maxR:
-                    maxR = height[right]
-                else:
-                    res += maxR - height[right]
-                right -= 1
+# def trap(height):
+#         left = 0
+#         right = len(height) -1
+#         res = 0
+#         maxL = 0
+#         maxR = 0
+#         while left < right:
+#             if height[left] > height[right]:
+#                 if height[right] >= maxR:
+#                     maxR = height[right]
+#                 else:
+#                     res += maxR - height[right]
+#                 right -= 1
                  
-            else:
-                if height[left] >= maxL:
-                    maxL = height[left]
-                else:
-                    res += maxL - height[left]
-                left += 1   
+#             else:
+#                 if height[left] >= maxL:
+#                     maxL = height[left]
+#                 else:
+#                     res += maxL - height[left]
+#                 left += 1   
                 
-        return res
+#         return res
 
-print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))       
+# print(trap([0,1,0,2,1,0,1,3,2,1,2,1])) 
+
+
+# Write a function that takes in a non-empty array of integers and returns an array of the same length, where each element in the output array is equal to the product of every other number in the input array.
+# In other words, the value at output[i] is equal to the product of every number in the input array other than input[i].
+# NOTE: You're expected to solve this problem without using division.
+# Most Efficient: O(n) Time | O(n) Space
+# Case 1:
+# Input: arr = [5, 1, 4, 2]
+# Output: [8, 40, 10, 20]
+# Explained:
+# // 8 is equal to 1 x 4 x 2
+# // 40 is equal to 5 x 4 x 2
+# // 10 is equal to 5 x 1 x 2
+# // 20 is equal to 5 x 1 x 4
+# Case 2:
+# Input: arr = [1, 8, 6, 2, 4]
+# Output: [384, 48, 64, 192, 96] 
+
+def func(arr):
+    length = len(arr)
+    res = [1 for i in range(length)]
+    temp = 1
+    #left side multiply
+    for i in range(length):
+        res[i] = temp
+        temp *= arr[i]
+        
+    temp = 1
+    #right side multiply
+    for i in range(length-1, -1, -1):
+        res[i] *= temp
+        temp *= arr[i]
+        
+    return res
+print(func([5, 1, 4, 2]))
+        
          
         
     
