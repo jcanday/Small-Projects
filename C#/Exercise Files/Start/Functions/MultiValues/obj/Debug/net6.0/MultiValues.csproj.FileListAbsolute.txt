@@ -1,0 +1,15 @@
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\bin\Debug\net6.0\MultiValues.exe
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\bin\Debug\net6.0\MultiValues.deps.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\bin\Debug\net6.0\MultiValues.runtimeconfig.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\bin\Debug\net6.0\MultiValues.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\bin\Debug\net6.0\MultiValues.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.csproj.AssemblyReference.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.AssemblyInfoInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.AssemblyInfo.cs
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.csproj.CoreCompileInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\refint\MultiValues.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\MultiValues.genruntimeconfig.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Functions\MultiValues\obj\Debug\net6.0\ref\MultiValues.dll
