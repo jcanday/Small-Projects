@@ -199,34 +199,64 @@
 
 # solution([-10, -9, -8, -6, -3, -2, -1, 0, 1, 3, 4, 5, 7, 8, 9, 10, 11, 14, 15, 17, 18, 19, 20])
 # # returns "-10--8,-6,-3-1,3-5,7-11,14,15,17-20"
-def solution(args):
-    resList = []
-    pointer = 0
-    range = []
-    while pointer < len(args):
-        if pointer == len(args)-1:
-            if range:
-                range.append(str(args[pointer]))
-                if len(range) >= 3:
-                    resList.append(f'{range[0]}-{range[-1]}')
-                    range.clear()
-                elif len(range) < 3:
-                    resList.extend(range)
-                    range.clear()               
-            else:
-                resList.append(str(args[pointer]))
-        elif args[pointer+1] == args[pointer] + 1:
-            range.append(str(args[pointer]))
-        else:
-            if range:
-                range.append(str(args[pointer]))
-                if len(range) >= 3:
-                    resList.append(f'{range[0]}-{range[-1]}')
-                    range.clear()
-                elif len(range) < 3:
-                    resList.extend(range)
-                    range.clear()               
-            else:
-                resList.append(str(args[pointer]))
-        pointer += 1
-    return ",".join(resList)
+# 0
+
+
+# Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
+# An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+# Example 1:
+# Input: grid = [
+#   ["1","1","1","1","0"],
+#   ["1","1","0","1","0"],
+#   ["1","1","0","0","0"],
+#   ["0","0","0","0","0"]
+# ]
+# Output: 1
+# Example 2:
+# Input: grid = [
+#   ["1","1","0","0","0"],
+#   ["1","1","0","0","0"],
+#   ["0","0","1","0","0"],
+#   ["0","0","0","1","1"]
+# ]
+# Output: 3
+# Constraints:
+# m == grid.length
+# n == grid[i].length
+# 1 <= m, n <= 300
+# grid[i][j] is '0' or '1'.
+
+def func(grid):
+    # edge case if there is no grid
+        if not grid:
+            return 0
+        # initialize island counter
+        count = 0
+        # loop over every value in the matrix
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                # if we find a 1, trigger a dfs to updated all touching 1's
+                if grid[i][j] == '1':
+                    dfs(grid, i, j)
+                    # once that dfs is complete, count that as one island
+                    count += 1
+        return count
+# dfs helper function
+def dfs(grid, i, j):
+    # if we have stepped outside of the grid or run into a 0 or #, return
+    if i<0 or j<0 or i>=len(grid) or j>=len(grid[0]) or grid[i][j] != '1':
+        return
+    # if this is a 1, update to a placeholder so we don't count it again
+    grid[i][j] = '#'
+    # keep looking for more 1's in every direction!
+    dfs(grid, i+1, j)
+    dfs(grid, i-1, j)
+    dfs(grid, i, j+1)
+    dfs(grid, i, j-1)
+                
+print(func([
+   ["1","1","1","1","0"],
+   ["1","1","0","1","0"],
+   ["1","1","0","0","0"],
+   ["0","0","0","0","0"]
+ ]))

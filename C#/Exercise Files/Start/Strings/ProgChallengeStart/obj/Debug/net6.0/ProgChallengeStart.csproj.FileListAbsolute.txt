@@ -1,0 +1,15 @@
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.csproj.AssemblyReference.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.AssemblyInfoInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.AssemblyInfo.cs
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.csproj.CoreCompileInputs.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\bin\Debug\net6.0\ProgChallengeStart.exe
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\bin\Debug\net6.0\ProgChallengeStart.deps.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\bin\Debug\net6.0\ProgChallengeStart.runtimeconfig.json
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\bin\Debug\net6.0\ProgChallengeStart.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\bin\Debug\net6.0\ProgChallengeStart.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\refint\ProgChallengeStart.dll
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.pdb
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ProgChallengeStart.genruntimeconfig.cache
+C:\Users\johnj\coding_temple\Z\C#\Exercise Files\Start\Strings\ProgChallengeStart\obj\Debug\net6.0\ref\ProgChallengeStart.dll

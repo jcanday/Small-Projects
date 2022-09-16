@@ -18,7 +18,36 @@ namespace ProgChallengeStart
 
             // Start the game and run until user quits or guesses correctly
             // HINT: You'll need a way to convert the user's input to an integer
-            
+            int guesses = 0;
+            string inputGuess = "";
+            int answer = 0;
+            bool correct = false;
+            while (inputGuess != "-1"){
+                inputGuess = Console.ReadLine();
+                try{
+                    answer = int.Parse(inputGuess);
+                } 
+                catch {
+                    Console.WriteLine("Enter a valid number!");
+                }
+                finally{
+                    guesses ++;
+                }
+                if(answer == theNumber){
+                    Console.WriteLine("Correct");
+                    Console.WriteLine($"Number of guesses {guesses}");
+                    break;
+                }
+                else if(answer > theNumber){
+                    Console.WriteLine("Nope, lower than that");
+                    Console.WriteLine("Whats your guess?");
+                }
+                else{
+                    Console.WriteLine("Nope, higher than that");
+                    Console.WriteLine("Whats your guess?");
+                }
+            }
+                
         }
     }
 }
