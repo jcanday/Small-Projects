@@ -110,7 +110,7 @@
 
 # Write a function that takes in a non-empty array of integers and returns an array of the same length, where each element in the output array is equal to the product of every other number in the input array.
 # In other words, the value at output[i] is equal to the product of every number in the input array other than input[i].
-# NOTE: You're expected to solve this problem without using division.
+# You're expected to solve this problem without using division.
 # Most Efficient: O(n) Time | O(n) Space
 # Case 1:
 # Input: arr = [5, 1, 4, 2]
@@ -124,23 +124,57 @@
 # Input: arr = [1, 8, 6, 2, 4]
 # Output: [384, 48, 64, 192, 96] 
 
-def func(arr):
-    length = len(arr)
-    res = [1 for i in range(length)]
-    temp = 1
-    #left side multiply
-    for i in range(length):
-        res[i] = temp
-        temp *= arr[i]
+# def func(arr):
+#     length = len(arr)
+#     res = [1 for i in range(length)]
+#     temp = 1
+#     #left side multiply
+#     for i in range(length):
+#         res[i] = temp
+#         temp *= arr[i]
         
-    temp = 1
-    #right side multiply
-    for i in range(length-1, -1, -1):
-        res[i] *= temp
-        temp *= arr[i]
+#     temp = 1
+#     #right side multiply
+#     for i in range(length-1, -1, -1):
+#         res[i] *= temp
+#         temp *= arr[i]
         
-    return res
-print(func([5, 1, 4, 2]))
+#     return res
+# print(func([5, 1, 4, 2]))
+
+# There are 10 floors in a hotel (numbered from 0 to 9). On each floor there are 26 rooms, each marked with a capital letter of the English alphabet (from "A" to "Z"). All rooms preceded with "+" means that room is being booked. All rooms starting with "-" means that someone is checking out. Return the room with the most bookings. If there are multiple rooms with the highest amount of bookings, return the room with the first room in alphanumeric order.
+# Examples:
+# Given A = ["+1A", "−1A", "+3F", "−3F", "+3F", "+8X"]
+# your function should return "3F". Room 3F was booked twice, while rooms 1A and 8X were booked only once. Note that rooms 3F and 8X are still booked at the end.
+# Given A = ["+1A", "+3F", "+8X", "−1A", "−3F", "−8X"]
+# your function should return "1A". All of the rooms "1A", "3F" and "8X" were booked once. "1A" is the smallest alpha-numerically out of them.
+# Given A = ["+0A"], your function should return "0A".
+# Given A = ["+9Z", "−9Z", "+9Z", "−9Z", "+9Z", "+3B"]
+# your function should return "9Z", as room 9Z was booked three times.
+# Assume that:
+# N is an integer within the range [1..600];
+# each element of array A is a string consisting of three characters: "+" or "−", a digit ("0"-"9"), and uppercase English letter ("A"-"Z");
+# the sequence is correct, that is every booked room was previously free and every freed room was previously booked.
+
+
+def func(A):
+    bookings = {}
+    # for i in A:
+    #     room = i[1:]
+    #     sign = i[0]
+    #     if (sign == "-" or sign == "+") and room not in bookings:
+    #         bookings[room] = 1
+    #     elif(sign == "+"):
+    #         bookings[room] += 1
+
+    # max_bookings = max(bookings.values())
+    # max_rooms = [key for key,value in bookings.items() if value == max_bookings]
+    # max_rooms.sort(key = lambda x:x[0])
+    # max_rooms_order = [i for i in max_rooms if i[0]==max_rooms[0][0]]
+    # max_rooms_order.sort(key = lambda x:x[1])
+    # return max_rooms_order[0]
+print(func(["+1A", "−1A", "+3F", "−3F", "+3F", "+8X"]))
+            
         
          
         
