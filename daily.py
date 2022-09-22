@@ -274,10 +274,10 @@
 
 
 # add bits to single using XOR
-def func(nums):
-    unique = 0
-    for i in nums:
-        unique = unique ^ i
-    return unique
+# def func(nums):
+#     unique = 0
+#     for i in nums:
+#         unique = unique ^ i
+#     return unique
 
-print(func([2,2,1]))
+# print(func([2,2,1]))
